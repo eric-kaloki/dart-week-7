@@ -103,9 +103,12 @@ class _SendMoneyPageState extends State<SendMoneyPage> {
                   child: DropdownButtonFormField<String>(
                     value: _paymentMethod,
                     items: const [
+                      DropdownMenuItem(value: 'M-Pesa', child: Text('M-Pesa')),
+                      DropdownMenuItem(value: 'Airtel Money', child: Text('Airtel Money')),
                       DropdownMenuItem(value: 'Bank Transfer', child: Text('Bank Transfer')),
                       DropdownMenuItem(value: 'Credit Card', child: Text('Credit Card')),
                       DropdownMenuItem(value: 'PayPal', child: Text('PayPal')),
+                      
                     ],
                     onChanged: (value) => setState(() => _paymentMethod = value!),
                     decoration: const InputDecoration(
